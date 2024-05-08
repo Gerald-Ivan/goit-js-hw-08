@@ -8,7 +8,7 @@ const timeFunction = data =>{
     let playerSecond = data.seconds;
     localStorage.setItem("videoplayer-current-time", playerSecond)
 }
-
+console.log(data);
 player.on('timeupdate', throttle(timeFunction, 1000));
 
 player.setCurrentTime(localStorage.getItem('videoplayer-current-time')).then(function(seconds) {
